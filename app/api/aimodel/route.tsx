@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { aj } from "../arcjet/route";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { openai } from "@/utils/openai";
+import { aj } from "@/utils/arcjet";
 
 const PROMPT = `You are an AI Trip Planner Agent. Your goal is to help the user plan a trip by asking one relevant trip-related question at a time.
 Only ask questions about the following details in order, and wait for the user’s answer before asking the next:
